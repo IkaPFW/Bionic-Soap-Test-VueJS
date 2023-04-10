@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .mr-auto, .mx-auto {
+            margin-right: auto !important;
+        }
+
+        #hiring {
+            height: 100%;
+            width: 100%;
+        }
+
+        #hiring .hiring-title {
+            color: #4b9741;
+            font-size: 3rem;
+            font-weight: 700;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #hiring .hiring-parent-job {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #hiring .hiring-parent-job .hiring-child-job {
+            display: inline-block;
+            margin: 10px 0 0 10px;
+            width: calc(50% - 11px)
+        }
+
+        #hiring .hiring-parent-job .hiring-child-job .hiring-content-job {
+            align-items: center;
+            background: #f0ede5;
+            border-radius: 10px;
+            box-shadow: 0 4px 4px rgba(0,0,0,.25);
+            display: flex;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding: 1rem;
+        }
+
+        #hiring .hiring-parent-job .hiring-child-job .hiring-content-job .hiring-content-title {
+            color: #4b9741;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+
+        #hiring .hiring-parent-job .hiring-child-job .hiring-content-job .hiring-content-btn {
+            background: #f09506;
+            border: 1px solid #f09506;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            white-space: nowrap;
+        }
+
+        #job-content {
+            background-color: #f0ede5;
+            margin: auto;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3rem;
+            display: flex;
+            flex-direction: column;
+            outline: 0;
+            pointer-events: auto;
+            position: relative;
+            width: 70%;
+        }
+
+        .job-content-header {
+            -webkit-box-align: start;
+            -webkit-box-pack: justify;
+            align-items: flex-start;
+            border-bottom: 1px solid #dee2e6;
+            border-top-left-radius: calc(.3rem - 1px);
+            border-top-right-radius: calc(.3rem - 1px);
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .job-content-title {
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .job-content-header .close {
+            margin: -1rem -1rem -1rem auto;
+            padding: 1rem;
+        }
+
+        .close {
+            color: #000;
+            float: right;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            opacity: .5;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        button.close {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .job-content-body {
+            -webkit-box-flex: 1;
+            flex: 1 1 auto;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .job-content-join {
+            height: 100%;
+            padding-bottom: 1rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            width: 100%;
+        }
+
+        .job-title {
+            color: #4b9741;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .job-apply-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .job-apply-parent {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .job-apply-parent .job-apply-child {
+            -webkit-box-flex: 1;
+            display: inline-block;
+            flex-grow: 1;
+            padding-bottom: 1rem;
+            padding-right: 2rem;
+            width: calc(50% - 11px);
+        }
+
+        .job-apply-parent .job-apply-child .job-apply-label {
+            font-weight: 700;
+        }
+
+        .job-apply-parent .job-apply-child .job-apply-file-image {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .job-apply-parent .job-apply-child .job-apply-file-image .job-apply-file-image-btn {
+            background: #f09506;
+            border: 1px solid #f09506;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 700;
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .job-apply-btn {
+            background: #f09506;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .input-outline{
+            background: transparent;
+            border-width: 0 0 2px;
+            box-shadow: inset 0 0 0 rgba(0,0,0,.08)!important;
+            outline: 0;
+        }
+        /* #job-content {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3rem;
+            display: flex;
+            flex-direction: column;
+            outline: 0;
+            pointer-events: auto;
+            position: relative;
+            width: 100%;
+        } */
+    </style>
+</head>
+<body>
+    <div id="hiring">
+        <div class="hiring-title">We're Hiring</div>
+        <div class="hiring-parent-job">
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">Marketing Planner</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">UI/UX Content Writer</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">UI/UX Content Planner</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">UI/UX Designer</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">HR/Legal Manager</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-child-job">
+                <div class="hiring-content-job">
+                    <div class="mr-auto hiring-content-title">Java Spring Boot</div>
+                    <div>
+                        <div class="hiring-content-btn">See more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="job-content">
+        <header class="job-content-header">
+            <h5 class="job-content-title"></h5>
+            <button type="button" class="close">Back</button>
+        </header>
+        <div class="job-content-body">
+            <div class="job-content-join">
+                <div>
+                    <div>
+                        <div>
+                            <p class="job-title">
+                                Marketing Planner
+                            </p>
+                        </div>
+                        <div>
+                            <div class="job-description">
+                                <h5>
+                                    <strong>Job Description:</strong>
+                                </h5>
+                                <ul>
+                                    <li>Insert job description here</li>
+                                </ul>
+                                <h5>
+                                    <strong>Skill:</strong>
+                                </h5>
+                                <ul>
+                                    <li>Insert skills here</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-apply-title pt-4 pb-3">Send Your Job Application</div>
+                        <div class="job-apply-parent">
+                            <div class="job-apply-child">
+                                <label for="YourName" class="job-apply-label">Your Name</label>
+                                <input type="text" id="YourName" placeholder="Enter your name" class="form-control input-outline"/>
+                            </div>
+                            <div class="job-apply-child">
+                                <label for="MobileNumber" class="job-apply-label">Mobile Number</label>
+                                <input type="text" id="MobileNumber" placeholder="Enter your mobile number" class="form-control input-outline"/>
+                            </div>
+                            <div class="job-apply-child">
+                                <label for="EmailAddress" class="job-apply-label">Email Address</label>
+                                <input type="text" id="EmailAddress" placeholder="Enter your email" class="form-control input-outline"/>
+                            </div>
+                            <div class="job-apply-child">
+                                <label for="WriteMessage" class="job-apply-label">Write your message here...</label>
+                                <textarea type="text" form="WriteMessage" placeholder="Write your message" rows="1" class="form-control input-outline" style="resize: none;"></textarea>
+                            </div>
+                            <div class="job-apply-child">
+                                <label for="file" class="job-apply-label">File</label>
+                                <div class="job-apply-file-image">
+                                    <div class="p-1">
+                                        <button class="job-apply-file-image-btn">
+                                            Upload file
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <input hidden="hidden" type="file" id="file_photo" data-cy="att" multiple="multiple" accept="image/*,.pdf,.doc,.docx"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <button type="submit" id="save-entity" class="btn btn-sm job-apply-btn">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
