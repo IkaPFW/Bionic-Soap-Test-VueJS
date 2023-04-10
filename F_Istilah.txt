@@ -1,0 +1,7 @@
+A. Cypress -> Aplikasi untuk menguji fungsionalitas front end
+B. Kubernetes -> Remote environment cluster yang membantu mengurangi beban local environment ketika men-develop suatu aplikasi yang memiliki operasi yang berat 
+C. ORM -> (Object-Relation Mapping) Garis besar hubungan antara objek-objek yang ada dalam suatu programming
+D. Class -> Suatu entitas dalam programming yang memiliki properti-properti dengan berbagai tipe data dan metode-metode tertentu yang dapat mengolah properti
+E. Function -> Kode snippet yang menentukan proses pengolahan data dengan metode-metode yang ditentukan oleh programmer
+F. DevOp -> Metodologi dalam membuat software (software DEVelopment) dan mengoperasikan teknologi informasi (IT OPerations)
+G. Docker -> Aplikasi yang membantu dalam development, shipping, dan deployment server untuk aplikasi atau program yang sedang atau sudah dibuat

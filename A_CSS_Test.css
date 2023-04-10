@@ -1,0 +1,83 @@
+#main {
+    height: 100vh;
+}
+
+#tier-1, #tier-2{
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tier-3 {
+    height: 80vh;
+}
+
+#topmost {
+    background-color: aquamarine;
+}
+
+#tier-2 > #midleft {
+    background-color: brown;
+}
+
+#tier-2 > #midright {
+    background-color: yellowgreen;
+}
+
+#bottomleft, #bottomright {
+    height: 100%;
+}
+
+#bottomleft .bigpic {
+    height: 70%;
+    background-color: bisque;
+}
+
+#bottomleft .bigpic .p-5 div {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+}
+
+#bottomleft .smallgroup {
+    height: 30%;
+}
+
+#bottomleft .smallgroup .small-1{
+    background-color: blue;
+}
+
+#bottomleft .smallgroup .small-2{
+    background-color: violet;
+}
+
+#bottomleft .smallgroup .small-3{
+    background-color: lightgreen;
+}
+
+#bottomright .col-12{
+    height: 100%;
+}
+
+#bottomright .col-12 .row{
+    height: 20%;
+    background-color: black;
+}
+
+@media (max-width: 426px) {
+    .col-6, .col-8, #bottomright {
+        width: 100%;
+    }
+
+    #bottomleft {
+        height: 60%;
+    }
+
+    #bottomright .col-12 {
+        flex-direction: row;
+    }
+
+    #bottomright .col-12 .row {
+        width: 30%;
+    }
+}

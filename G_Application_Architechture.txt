@@ -1,0 +1,7 @@
+3 Contoh Application Architecture:
+    - Layered atau N-tier Architecture -> Didasarkan pada 'lapisan' operasional aplikasi. Salah satu contohnya adalah MVC (Model-View-Controller)
+    - Event-based Architecture -> Didasarkan pada hubungan antar event yang ada dalam suatu aplikasi
+    - Microservices Architecture -> Mengintegrasikan services-services yang mendukung jalannya aplikasi dalam skala kecil
+
+Teknologi yang terbaik: Microservices Architecture
+Alasan: Integrasi services memberikan banyak fleksibilitas dalam menentukan jalannya operasi di dalam aplikasi
